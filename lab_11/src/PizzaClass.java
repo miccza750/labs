@@ -2,12 +2,20 @@ enum PizzaClass {
     MALA(13),
     SREDNIA(17),
     DUZA(20);
-    private int cena;
+    private int srednica;
     // Konstruktor
-    PizzaClass(int cena) {
-        this.cena = cena;
+    PizzaClass(int srednica) {
+        this.srednica = srednica;
     }
     public int getCena() {
-        return cena;
+        switch (srednica){
+            case 13:
+                return 20;
+            case 17:
+                return 30;
+            case 20:
+                return 40;
+        }
+        return 0;
     }
 }
